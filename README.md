@@ -1,3 +1,3 @@
-# Soul Taxing: Vamprire Like 
-game prototype
+# Soul Taxing: Vampire Like 
+2d game prototype on godot engine
 
