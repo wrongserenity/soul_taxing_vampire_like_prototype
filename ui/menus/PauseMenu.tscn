@@ -1,0 +1,56 @@
+[gd_scene load_steps=2 format=3 uid="uid://ct4v24sys0nni"]
+
+[ext_resource type="Script" uid="uid://bbds0104f2crn" path="res://ui/menus/PauseMenu.gd" id="1_7lf2u"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7lf2u")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -39.5
+offset_top = -68.0
+offset_right = 39.5
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinueButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Continue"
+
+[node name="RestartButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Restart"
+
+[node name="SettingsButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Settings"
+
+[node name="ExitButton" type="Button" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[connection signal="pressed" from="Panel/VBoxContainer/ContinueButton" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/RestartButton" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/ExitButton" to="." method="_on_exit_pressed"]
